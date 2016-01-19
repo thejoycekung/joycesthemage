@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<!--
+ 
+theme 1 v2.0 (brutal simplicity) by seeroflights
+
+please don't repost as your own
+please don't use it as a base
+please don't remove the credit or move it somewhere else
+ 
+-->
+ 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ 
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+ 
+ 
+<meta name="color:Text" content="#bbbbbb"/>
+<meta name="color:Link" content="#aaaaaa"/>
+<meta name="color:linkbg" content="#eeeeee"/>
+<meta name="color:Tags" content="#cccccc"/>
+<meta name="color:Hover" content="#f1f1f1"/>
+<meta name="color:Line" content="#f2f2f2"/>
+<meta name="color:Border" content="#eeeeee"/>
+<meta name="color:scrollbarbg" content="ffffff"/>
+ 
+<meta name="image:sidebar" content=""/>
+<meta name="image:bg" content=""/>
+ 
+<meta name="text:linkA" content="">
+<meta name="text:linkA url" content="/">    
+<meta name="text:linkB" content="">
+<meta name="text:linkB url" content="/">
+<meta name="text:linkC" content="">
+<meta name="text:linkC url" content="/">
+<meta name="text:linkD" content="">
+<meta name="text:linkD url" content="/">
+
+ 
+ 
+ 
+<style type="text/css">
+ 
+ 
+ ::-webkit-scrollbar {
+width: 5px;height: 5px;}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+height: 6px;display: block;background-color: ;}
+::-webkit-scrollbar-track-piece {
+background-color: ffffff;}
+::-webkit-scrollbar-thumb:vertical {
+height: 9px;background-color: ffffff;border-top:1px solid ffffff;border-bottom:1px solid ffffff;}
+ 
+ 
+body {
+    background:;
+    margin:0px;
+    color:#bbbbbb;
+    font-family:Arial, Helvetica;
+    font-size:12px;
+    line-height:100%;
+}
+ 
+a {
+    text-decoration:none;
+    -moz-outline-style:none;
+    color:#aaaaaa;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+h1 {
+    font-size:16px;
+    text-transform:uppercase;
+}
+ 
+blockquote {
+    padding-left:5px;
+    margin-left:5px;
+    border-left:2px solid;
+}
+   
+blockquote blockquote {
+    padding-left:5px;
+    border-left:2px solid;
+}
+ 
+ 
+a:hover {
+    opacity:1;
+    color:#f1f1f1;
+}
+
+
+/*If your sidebar picture is not 150px x 324px, change WIDTH and HEIGHT.*/ 
+#container {
+    position:fixed;
+    z-index:2;
+    margin-left:220px;
+    margin-top:110px;
+    width:150px;
+    height:324px;
+    background:#fff;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+#container:hover #sidebarimg {
+    opacity:0;
+    z-index:-20;
+}
+
+#container:hover .desc {
+    opacity:1;
+}
+
+#head {
+    width:500px;
+    margin-top:-555px;
+    margin-left:250px;
+    background:#fff;
+    padding:10px;
+}
+
+#title {
+    width:400px;
+    margin-left:50px;
+    font-size:15px;
+    line-height:200%;
+    text-align:center;
+    font-family:cambria;
+    font-style:italic;
+    display:inline-block;
+    background:#eeeeee;
+    padding:5px;
+}
+
+.links {
+    margin-top:10px;
+    width:500px;
+    padding:9px;
+    letter-spacing:2px;
+    font-family:Arial, Helvetica;
+    text-align:center;
+    text-transform:uppercase;
+    z-index:2;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+ 
+.links a {
+    font-size:12px;
+    min-width:60px;
+    display:inline-block;
+    color:#aaaaaa;
+    background:#eeeeee;
+    line-height:200%;
+    padding:5px;
+}
+ 
+.links a:hover {
+   background:#f1f1f1;
+   color:#eeeeee;
+}
+
+#sidebar {
+    width:150px;
+    opacity:1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+ 
+#sidebarimg {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+#sidebarimg img {
+    width:150px;
+}
+
+/*If your sidebar picture is not 150px x 324px, change the MARGIN-TOP to NEGATIVE your picture's height.*/
+.desc {
+    opacity:0;
+    position:fixed;
+    margin-top:-324px;
+    margin-left:0px;
+    font-family:cambria;
+    line-height:110%;
+    font-size:12px;
+    font-style:italic;
+    width:130px;
+    padding:9px;
+    text-align:justify;
+    color:#bbbbbb;
+    z-index:200;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+   
+.desc a {
+    color:#aaaaaa;
+}
+
+#pagi{
+    width:100px;
+    font-size:12px;
+    text-align:justify;
+    margin-left:15px;
+    margin-top:55px;
+    position:fixed;
+    font-family:cambria;
+    letter-spacing:0px;
+}
+ 
+ 
+#all {
+    padding:10px;
+    width:500px;
+    margin-left:450px;
+    margin-top:120px;
+    font-size:10px;
+}
+ 
+#posts {
+    width:500px;
+    padding-bottom:20px;
+    padding:10px;
+    background-color:;
+}
+ 
+#details {
+    text-align:right;
+    margin-top:8px;
+    text-transform:uppercase;
+    font-size:8px;
+    font-style:none;
+    border-top:1px solid #f2f2f2;
+    opacity:0;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+}
+ 
+ 
+#tags {
+    font-family:cambria;
+    letter-spacing:0px;
+    text-transform:lowercase;
+    font-size:10px;
+    font-style:italic;
+    margin-top:2px;
+    text-align:right;
+    float:right;
+}
+   
+#tags a {
+    display:inline-block;
+    padding:-3px;
+    text-align:right;
+    color:#cccccc;
+    }  
+ 
+#posts:hover #details {
+    opacity:1;
+}
+
+.bubble {align:right;background: #eee; margin:7px 0px 5px 66px;padding:10px;position: relative;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.bubble p {margin:1px 0px;}
+.bubble span {display:block;position:absolute;width:1px;height:1px;font-size: 0;line-height: 1px;left:-10px;top:10px;border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:10px solid #eee;}
+
+.askborder {float: left;margin: 1px 4px 0 0;padding: 2px; background: #eee} ::-webkit-scrollbar {
+     width: 6px;
+     height: 6px;
+     background:;
+}
+
+#cred {
+    position:fixed;
+    bottom:2px; 
+    right:-82px; 
+    font-size:9px; 
+    letter-spacing:1px; 
+    font-family:calibri;
+    text-transform:uppercase;
+    border:1px solid;
+    padding:4px;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+}
+
+#cred:hover {
+    right:3px;
+}
+
+.my-like {
+    cursor:pointer;
+    display:inline-block;
+    vertical-align:top;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+}
+
+.my-liked {
+    color:red;
+    display:inline-block;
+    vertical-align:top;
+}
+
+.my-like:hover {
+    color:{color:hover};
+    cursor:pointer;
+    display:inline-block;
+    vertical-align:top;
+}
+
+{CustomCSS}
+
+</style>
+<script>
+window.onload = function () {
+document.body.insertAdjacentHTML( 'beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>' );
+document.addEventListener( 'click', function ( event ) {
+    var myLike = event.target;
+    if( myLike.className.indexOf( 'my-like' ) > -1 ) {
+        var frame = document.getElementById( 'my-like-frame' ),
+            liked = ( myLike.className == 'my-liked' ),
+            command = liked ? 'unlike' : 'like',
+            reblog = myLike.getAttribute( 'data-reblog' ),
+            id = myLike.getAttribute( 'data-id' ),
+            oauth = reblog.slice( -8 );
+        frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
+        liked ? myLike.className = 'my-like' : myLike.className = 'my-liked';
+    };
+}, false );
+};
+</script>
+
+</head><body>
+<div id="container">
+<div id="sidebar">
+    <div id="sidebarimg">
+        <img src="{image:sidebar}">
+    </div>
+    <div class="desc">
+        {Description}
+    </div>
+    {block:Pagination}
+        <div id="pagi">
+            {block:PreviousPage}
+                <a href="{PreviousPage}">&larr;</a>&nbsp;&nbsp;
+            {/block:PreviousPage}
+            {block:JumpPagination length="3"}
+                {block:CurrentPage}
+                    <span class="current_page">
+                        {PageNumber}
+                    </span>&nbsp;&nbsp;
+                {/block:CurrentPage}
+                {block:JumpPage}
+                    <a class="jump_page" href="{URL}">
+                        {PageNumber}
+                    </a>&nbsp;&nbsp;
+                {/block:JumpPage}
+            {/block:JumpPagination}
+            {block:NextPage}
+                <a href="{NextPage}">&rarr;</a>
+            {/block:NextPage}
+        </div>
+    {/block:Pagination} 
+</div>
+<div id="head">
+    <div id="title">
+        <a href="/">{Title}</a>
+    </div>
+    <div class="links">
+        {block:IfLinkA}
+            <a href="{text:linkA url}">{text:linkA}</a>
+        {/block:IfLinkA}
+        {block:IfLinkB}
+            <a href="{text:linkB url}">{text:linkB}</a>
+        {/block:IfLinkB}
+        {block:IfLinkC}
+            <a href="{text:linkC url}">{text:linkC}</a>
+        {/block:IfLinkC}
+        {block:IfLinkD}
+            <a href="{text:linkD url}">{text:linkD}</a>
+        {/block:IfLinkD}
+    </div>
+</div>
+</div>
+
+ 
+<div id="all">
+{block:Posts}<div id="posts">
+ 
+{block:Text}<h1>{block:Title}{Title}{/block:Title}</h1>{Body}{/block:Text}
+ 
+{block:Photo}{LinkOpenTag}<img src="{PhotoURL-500}">{LinkCloseTag}{block:PermalinkPage}{block:Caption}{Caption}{/block:Caption}{/block:PermalinkPage}{/block:Photo}
+ 
+{block:Link}<h1><a href="{URL}"{Target}>{Name}→</a></h1>{block:Description}{Description}{/block:Description}{/block:Link}
+ 
+{block:Photoset}{Photoset-500}{block:PermalinkPage}{block:Caption}{Caption}{/block:Caption}{/block:PermalinkPage}{/block:Photoset}
+ 
+{block:Quote}{Quote}{/block:Quote}
+ 
+{block:Audio}<left>{block:AlbumArt}<img src="{AlbumArtURL}" width="80px" height="80px" align="left" style="margin-right:10px" />{/block:AlbumArt}<span class="audio">{AudioPlayerWhite}</left></span>
+<br>{block:TrackName}<b>Title:</b> {TrackName}<br />{/block:TrackName}
+<br>{block:Artist}<b>Artist:</b> {Artist}<br />{/block:Artist}
+{/block:ExternalAudio}<br><b>Played:</b> {PlayCount} times{block:PermalinkPage}{block:Caption}{Caption}{/block:Caption}{/block:PermalinkPage}
+{/block:Audio}
+ 
+{block:Video}{Video-500}{block:PermalinkPage}{block:Caption}{Caption}{/block:Caption}{/block:PermalinkPage}{/block:Video}
+ 
+{block:Chat}{block:Title}<h1>{Title}</h1>{/block:Title}{block:Lines}{block:Label}<b>{Label}</b>{/block:Label} {Line}<br>{/block:Lines}{/block:Chat}
+ 
+ 
+{block:Answer}
+<img src="{AskerPortraitURL-48}" width="40px" align="left" class="askborder"><div class="bubble"><span></span>{Asker} asked: {Question}&nbsp;</div>{Answer}
+{/block:Answer}
+ 
+<div id="details">
+<br><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}</a> // <a href="{Permalink}">{12Hour}:{Minutes} </a> {block:RebloggedFrom} via <a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom} {block:ContentSource} <a href="{SourceURL}">© {SourceLink}</a> {/block:ContentSource} // <a href="{Permalink}">{NoteCountWithLabel}</a> (<div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like">like</div>/<a href="{ReblogURL}">reblog</a>)<br>
+{block:HasTags}<div id="tags">tagged as:{block:Tags} #<a href="{TagURL}">{Tag}</a> {/block:Tags}</div>{/block:HasTags}</div></div>
+{/block:Posts}
+{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+{/block:Posts}</div></div>
+ 
+ 
+<div id="cred"><a href="http://seeroflights.tumblr.com/">seeroflights<font color="red">&hearts;</font></a></center></div>
+ 
+   
+</body></html>

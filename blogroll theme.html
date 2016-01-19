@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<!--
+ 
+blogroll theme by seeroflights
+don't steal
+use as base or use as theme
+credit all the way pls
+ 
+-->
+ 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ 
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+ 
+<style type="text/css">
+ 
+ 
+ ::-webkit-scrollbar {
+width: 5px;height: 5px;}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+height: 6px;display: block;background-color: {color:white};}
+::-webkit-scrollbar-track-piece {
+background-color:#fff;}
+::-webkit-scrollbar-thumb:vertical {
+height: 9px;background-color:#000;border-top:1px solid {color:scrollbarbg};border-bottom:1px solid {color:scrollbarbg};}
+::-webkit-scrollbar-thumb:horizontal {height:9px;background-color:#000;}
+ 
+ 
+body {
+    background:{color:background};
+    margin:0px;
+    color:{color:text};
+    font-family:Arial, Helvetica;
+    font-size:9px;
+    line-height:100%;
+}
+ 
+a {
+    text-decoration:none;
+    -moz-outline-style:none;
+    color:{color:link};
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    -ms-transition:all 0.5s ease-in-out;
+}
+
+h1 {
+    font-size:12px;
+    text-transform:uppercase;
+}
+ 
+a:hover {
+    color:{color:hover};
+}
+
+img {
+margin:5px 5px;
+opacity:0.6;
+border-radius:0px;
+-webkit-border-radius:0px;
+-moz-border-radius:0px;
+-webkit-filter: grayscale(50%);
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+-o-filter: grayscale(100%);
+-webkit-transition:all 0.5s ease-in-out;
+-moz-transition:all 0.5s ease-in-out;
+-o-transition:all 0.5s ease-in-out;
+-ms-transition:all 0.5s ease-in-out;
+}
+
+img:hover {
+border-radius:64px;
+transform:rotate(360deg);
+-webkit-border-radius:64px;
+-webkit-transform:rotate(360deg);
+-moz-border-radius:64px;
+opacity:1;
+-webkit-filter: grayscale(0%);
+-moz-filter: grayscale(0%);
+-ms-filter: grayscale(0%);
+-o-filter: grayscale(0%);
+}
+
+#container {
+margin-top:30px;
+margin-left:200px;
+width:900px;
+height:600px;
+overflow:scroll;
+}
+
+#title {
+font-size:100px;
+letter-spacing:10px;
+margin-top:100px;
+margin-left:500px;
+padding:10px;
+font-family:always;
+}
+
+@font-face{font-family:always;src:url(http://static.tumblr.com/rxgmiea/3iLmsi7z3/always_forever.ttf);}
+
+#nav {margin-top:30px;margin-left:525px;}
+
+#nav a {display:inline-block;border:1px solid #eee;min-width:50px;text-align:center;padding:10px;text-transform:uppercase;color:#fff;-webkit-transition:all 0.5s ease-in-out;
+-moz-transition:all 0.5s ease-in-out;
+-o-transition:all 0.5s ease-in-out;
+-ms-transition:all 0.5s ease-in-out;background:#000;}
+
+#nav a:hover {background:#fff;color:#000;}
+
+#s-m-t-tooltip {
+max-width:300px;
+padding:3px 4px 3px 4px;
+margin:23px -5px 0px 20px;
+background-color:#fff; /* change the background color */
+font-family:helvetica; /* change the font */
+font-weight: 13px;
+font-size:12px; /* change the font size */
+letter-spacing:1px; /* change the letter spacing */
+text-transform:lowercase; /* can be uppercase, lowercase, none*/
+font-style: normal;
+color:#aaa; /* change the text color */
+z-index:999999999999999999999999999999999999;
+}
+ 
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:90,
+tip_fade_speed:600,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+</head>
+<body>
+<div id="title">
+blogroll ~
+</div>
+<div id="nav">
+<a href="/">home</a>
+<a href="/ask">ask</a>
+<a href="http://seeroflights.tumblr.com">cred</a>
+</div>
+<div id="container">
+{block:Following}
+{block:Followed}
+<a href="{FollowedURL}" title="{FollowedName}">
+<img src="{FollowedPortraitURL-64}">
+</a>
+{/block:Followed}
+{/block:Following}
+</div>
+</body></html>
