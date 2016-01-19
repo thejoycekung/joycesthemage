@@ -1,0 +1,138 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+     
+    <!--
+     
+    saved url theme by seeroflights
+    lol idk use as base or use as theme
+    either way pls credit
+     
+    -->
+     
+     
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+     
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+     
+     
+    <meta name="color:Text" content="#bbbbbb"/>
+    <meta name="color:Link" content="#aaaaaa"/>
+    <meta name="color:Border" content="#eeeeee"/>
+    <meta name="color:scrollbarbg" content="ffffff"/>
+
+    <meta name="image:bg" content=""/>
+    
+    <meta name="text:ask link" content=""/>
+    <meta name="text:savedurl" content=""/>
+    <meta name="text:mainblog" content=""/>
+    <meta name="text:mainblogurl" content=""/>
+    
+    <style type="text/css">
+     
+     
+     ::-webkit-scrollbar {
+    width: 5px;height: 5px;}
+    ::-webkit-scrollbar-button:start:decrement,
+    ::-webkit-scrollbar-button:end:increment {
+    height: 6px;display: block;background-color: {color:white};}
+    ::-webkit-scrollbar-track-piece {
+    background-color: {color:scrollbarbg};}
+    ::-webkit-scrollbar-thumb:vertical {
+    height: 9px;background-color: {color:scrollbarbg};border-top:1px solid {color:scrollbarbg};border-bottom:1px solid {color:scrollbarbg};}
+     
+     
+    body {
+        background:url(http://31.media.tumblr.com/da2f41d3c9ed85823b0614a2756711d0/tumblr_movdbcThVO1ru3nbdo7_100.png);
+        margin:0px;
+        color:{color:text};
+        font-family:Helvetica;
+        font-size:20px;
+        text-align:justify;
+    }
+     
+    a {
+        text-decoration:none;
+        background:#000;
+        padding:5px;
+        font-size:12px;
+        text-align:center;
+        color:{color:link};
+        text-transform:uppercase;
+        display:inline-block;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        min-width:60px;
+    }
+    
+    a:hover {
+        background:{color:link};
+        color:{color:hover};
+    }
+     
+    h1 {
+        font-size:12px;
+        text-transform:uppercase;
+    }
+     
+    blockquote {
+        padding-left:5px;
+        border-left:2px solid;
+    }
+       
+    blockquote blockquote {
+        padding-left:5px;
+        border-left:2px solid;
+    }
+    
+    #container {
+        width:125px;
+        height:125px;
+        background:#fff;
+        margin-top:300px;
+        margin-left:500px;
+        padding:100px;
+    }
+    
+    #nav {
+        margin-left:-90px;
+        margin-top:100px;
+        width:300px;
+    }
+    
+    #sorry {
+        position:fixed;
+        z-index:1000000;
+        margin-left:450px;
+        font-family:"Wisdom Script";
+        color:#000;
+        font-size:72px;
+        font-weight:500;
+        letter-spacing:5px;
+        -moz-transform:rotate(-25deg);
+        transform:rotate(-25deg);
+        -webkit-transform:rotate(-25deg);
+        text-shadow:2px 2px 2px red, -2px 2px 2px blue;
+        }
+    
+    @font-face {font-family:"Wisdom Script";src:url(http://static.tumblr.com/rxgmiea/XFMms95ts/wisdom_script.otf);}
+     
+</style>
+    
+</head><body>
+<div id="sorry">
+Sorry!
+</div>
+<div id="container">
+    {text:savedurl} is <div style="letter-spacing:6px;">currently</div> being saved by the user {text:mainblog}!
+<div id="nav">
+<a href="http://tumblr.com/dashboard">dash</a>
+<a href="{text:mainblogurl}">owner</a>
+<a href="{text:ask link}">discuss</a>
+<a href="http://seeroflights.tumblr.com">cred</a>
+</div>
+</div>
+</body></html>

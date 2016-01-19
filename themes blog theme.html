@@ -1,0 +1,389 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+ 
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+ 
+<meta name="color:links" content""/>
+<meta name="color:desc" content""/>
+<meta name="color:linkhover" content""/>
+<meta name="color:scrollbar" content""/>
+<meta name="color:border" content""/>
+ 
+<meta name="text:link1url" content""/>
+<meta name="text:link1name" content""/>
+<meta name="text:link2url" content""/>
+<meta name="text:link2name" content""/>
+<meta name="text:link3url" content""/>
+<meta name="text:link3name" content""/>
+ 
+<script type="text/javascript" 
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> 
+<script> 
+$(document).ready(function() { 
+// 
+$('a.poplight[href^=#]').click(function() { 
+var popID = $(this).attr('rel'); //Get Popup Name 
+var popURL = $(this).attr('href'); //Get Popup href to define size 
+var query= popURL.split('?'); 
+var dim= query[1].split('&'); 
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value 
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="http://upload.wikimedia.org/wikipedia/commons/f/f8/Tooltip-CloseButton.png" class="btn_close" title="Close" alt="Close" /></a>'); 
+var popMargTop = ($('#' + popID).height() + 80) / 2; 
+var popMargLeft = ($('#' + popID).width() + 80) / 2; 
+//Apply Margin to Popup 
+$('#' + popID).css({ 
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft 
+}); 
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) 
+return false; 
+}); 
+$('a.close, #fade').live('click', function() { 
+$('#fade , .popup_block').fadeOut(function() { 
+$('#fade, a.close').remove(); //fade them both out 
+}); 
+return false; 
+}); 
+}); 
+</script>
+ 
+ 
+<style type="text/css">
+
+ ::-webkit-scrollbar {
+width: 5px;height: 5px;}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+height: 6px;display: block;background-color: {color:white};}
+::-webkit-scrollbar-track-piece {
+background-color:#fff;}
+::-webkit-scrollbar-thumb:vertical {
+height: 9px;background-color:#000;border-top:1px solid {color:scrollbarbg};border-bottom:1px solid {color:scrollbarbg};}
+::-webkit-scrollbar-thumb:horizontal {height:9px;background-color:#000;}
+
+body {
+    background:;
+    margin:0px;
+    color:#bbbbbb;
+    font-family:Helvetica;
+    font-size:12px;
+    line-height:100%;
+}
+ 
+a {
+    text-decoration:none;
+    -moz-outline-style:none;
+    color:#aaaaaa;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+ 
+a:hover {
+    opacity:1;
+    color:#fff;
+}
+ 
+h1 {
+    font-size:20px;
+    text-transform:uppercase;
+    font-weight:normal;
+    padding:10px;
+    display:inline-block;
+    background:#000;
+    color:#fff;
+    width:200px;
+    text-align:center;
+    z-index:500;
+}
+ 
+h2 {
+    font-size:16px;
+    text-transform:lowercase;
+}
+
+blockquote {
+    border-left:5px solid #eee;
+    padding-left:5px;
+    margin-left:5px;}
+
+#header {
+    width:900px;
+    margin-left:200px;
+    height:60px;
+    padding:20px;
+    display:block;
+}
+
+#links {
+    margin-left:100px;
+}
+
+#links a {
+    text-transform:uppercase;
+    text-align:center;
+    padding:10px;
+    display:inline-block;
+    background:#000;
+    color:#fff;
+    min-width:50px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+}
+
+#links a:hover {
+    background:#fff;
+    color:#000;
+}
+
+.popup_block{
+display: none;
+background: #fff;
+background-image: url();
+padding: 10px;
+float: left;
+font-size: 10px;
+position: fixed;
+top: 50%; left: 50%;
+z-index: 200;
+border: 2px solid #363636;
+-moz-box-shadow: 0 0 5px #CFCFCF;
+-webkit-box-shadow: 0 0 5px #CFCFCF;
+}
+img.btn_close {
+float: right;
+margin: -5px -5px 0 0;
+}
+*html .popup_block {
+position: absolute;
+z-index:500;
+}
+
+#themecontainer {
+    margin-left:25px;
+    padding:20px;
+    max-width:760px;
+    max-height:660px;
+    overflow:scroll;
+    display:inline-block;
+    background:#eee;
+    border:2px solid #000;
+}
+
+#theme {
+    padding:10px;
+    width:220px;
+    height:220px;
+    margin-top:5px;
+    margin-left:5px;
+    display:inline-block;
+    background:#000;
+    text-align:center;
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:3px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+}
+
+#theme a {color:#fff; -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;}
+
+#theme a:hover {color:#000;}
+
+#theme ugh {
+    width:200px;
+    height:200px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+    top:-130px;
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:3px;
+    opacity:0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+}
+
+#themeimg {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;}
+    
+
+#themeimg img {
+    padding:10px;
+    min-width:200px;
+    min-height:200px;
+    max-width:200px;
+    max-height:200px;
+    display:inline-block;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+}
+    
+#theme:hover #themeimg {
+    opacity:0;
+    }
+
+#theme:hover ugh {
+    opacity:1;
+}
+
+#posts {
+    margin-top:-760px;
+    margin-left:860px;
+    z-index:100;
+    width:300px;
+    padding:5px;
+    height:800px;
+    overflow:scroll;
+    border:2px solid #000;
+}
+
+.bubble {align:right;background: #eee; margin:7px 0px 5px 66px;padding:10px;position: relative;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.bubble p {margin:1px 0px;}
+.bubble span {display:block;position:absolute;width:1px;height:1px;font-size: 0;line-height: 1px;left:-10px;top:10px;border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:10px solid #eee;}
+ 
+.askborder {float: left;margin: 1px 4px 0 0;padding: 2px; background: #eee;}
+
+#details {
+    text-align:right;
+    margin-top:8px;
+    text-transform:uppercase;
+    font-size:8px;
+    font-style:none;
+    border-top:1px solid #f2f2f2;
+    opacity:1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+}
+ 
+ 
+#tags {
+    font-family:cambria;
+    letter-spacing:0px;
+    text-transform:lowercase;
+    font-size:10px;
+    font-style:italic;
+    margin-top:2px;
+    text-align:right;
+    float:right;
+}
+   
+#tags a {
+    display:inline-block;
+    padding:-3px;
+    text-align:right;
+    color:#cccccc;
+}
+
+.my-like {
+    color:#aaa;
+    display:inline-block;
+    vertical-align:top;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+}
+ 
+.my-liked {
+    color:red;
+    display:inline-block;
+    vertical-align:top;
+}
+ 
+.my-like:hover {
+    color:{color:hover};
+    display:inline-block;
+    vertical-align:top;
+}
+
+#cred {
+    position:fixed;
+    bottom:2px;
+    right:-82px;
+    font-size:9px;
+    letter-spacing:1px;
+    font-family:calibri;
+    text-transform:uppercase;
+    border:1px solid;
+    padding:4px;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+}
+ 
+#cred:hover {
+    right:3px;
+}
+ 
+</style>
+ 
+</head>
+ 
+ 
+ 
+<body>
+
+<div id="header">
+<div id="links">
+<a href="/">home</a>
+<a href="http://tumblr.com/dashboard">dash</a>
+<a href="#?w=450" rel="02" class="poplight">ASK</a>
+<a href="http://seeroflights.tumblr.com">main</a>
+</div>
+<br>
+{Description}
+</div>
+
+<h1 style="margin-left:325px;margin-bottom:-20px;position:relative;z-index:5000;">THEMES</h1> 
+<div id="themecontainer">
+
+<div id="theme">
+<div id="themeimg"><img src="http://31.media.tumblr.com/289f5e83b90a4dbc21574844772a0f60/tumblr_mscu443DOl1r2w237o1_500.png"></div>
+<ugh>THEME 4:<br><a href="/theme4" target="_blank">live preview</a><br><br><a href="http://seeroflights.tumblr.com/post/59786270542" target="_blank">informations</a></ugh>
+</div>
+ 
+</div>
+
+<h1 style="position:absolute;margin-top:-68px;margin-left:80px;">ANSWERED</h1>
+<div id="posts">
+{block:Posts}
+<div style="padding:10px;">
+{block:Text}<h2>{block:Title}{Title}{/block:Title}</h2>{Body}{/block:Text}
+{block:Answer}
+<img src="{AskerPortraitURL-48}" width="40px" align="left" class="askborder"><div class="bubble"><span></span>{Asker} asked: {Question}&nbsp;</div>{Answer}
+{/block:Answer}
+<div id="details">
+<br><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}</a> // <a href="{Permalink}">{12Hour}:{Minutes} </a> {block:RebloggedFrom} via <a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom} {block:ContentSource} <a href="{SourceURL}">© {SourceLink}</a> {/block:ContentSource} // <a href="{Permalink}">{NoteCountWithLabel}</a> (<div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like">like</div>/<a href="{ReblogURL}">reblog</a>)<br></div></div>
+{/block:Posts}
+</div>
+
+<div id="cred"><a href="http://seeroflights.tumblr.com">seeroflights<font color="red">&hearts;</font></a>
+
+<div id="02" class="popup_block">
+</p><iframe frameborder="0" height="200" id="ask_form" scrolling="no" src="http://www.tumblr.com/ask_form/joycesthemage.tumblr.com" width="100%"></iframe></p>
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,312 @@
+<html>
+<head>
+<title>about me</title>
+<style type="text/css">
+@font-face {font-family:Intro;src:url(http://static.tumblr.com/rxgmiea/Hhfms515n/intro_inline.otf);}
+
+@font-face {font-family:Lavanderia;src:url(http://static.tumblr.com/rxgmiea/5drms7d0l/lavanderia_regular.otf);}
+
+h1 {display:none;}
+
+body {
+  font-family:Helvetica;
+  font-size:12px;
+  color:#000;
+}
+
+a {
+  display:inline-block;
+  padding:5px;
+  min-width:5px;
+  text-decoration:none;
+  color:#eee;
+  -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  -ms-transition:all 0.5s ease-in-out;
+}
+
+a:hover {
+  color:#000;
+}
+
+#quote {
+  padding:5px;
+  margin-top:10px;
+  margin-left:70px;
+  text-align:center;
+  width:1100px;
+  font-size:48px;
+  color:#000;
+  font-family:Intro;
+}
+
+#quote em {
+  font-family:Lavanderia;
+  display:block;
+  line-height:80%;
+}
+
+#quote i {
+  font-family:Lavanderia;
+  display:block;
+  line-height:80%;
+}
+
+#nav {
+  bottom:10px;
+  left:500px;
+  position:fixed;
+  z-index:500;
+}
+
+#nav a {
+  min-width:50px;
+  padding:5px;
+  text-transform:uppercase;
+  text-align:center;
+  margin-left:5px;
+  background:#000;
+  color:#fff;
+  -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  -ms-transition:all 0.5s ease-in-out;
+}
+
+#nav a:hover {
+  color:#000;
+  background:#fff;
+}
+
+#container {
+width:300px;
+height:300px;
+background:#000;
+margin-top:0px;
+margin-left:70px;
+}
+
+#hm1 {
+width:280px;
+height:280px;
+position:absolute;
+z-index:500;
+padding:10px;
+background:#eee;
+-webkit-transition:all 0.5s ease-in-out;
+-moz-transition:all 0.5s ease-in-out;
+-o-transition:all 0.5s ease-in-out;
+-ms-transition:all 0.5s ease-in-out;
+}
+
+#img1 {
+-webkit-transition:all 0.5s ease-in-out;
+-moz-transition:all 0.5s ease-in-out;
+-o-transition:all 0.5s ease-in-out;
+-ms-transition:all 0.5s ease-in-out;
+opacity:1;
+z-index:10000;
+margin-top:10px;
+margin-left:10px;
+}
+
+#img1 img {
+position:absolute;
+z-index:10000;
+min-width:260px;
+min-height:260px;
+max-width:260px;
+max-width:260px;
+}
+
+table {
+margin-left:15px;
+width:240px;
+opacity:0;
+z-index:1000;
+position:absolute;
+-webkit-transition:all 0.5s ease-in-out;
+-moz-transition:all 0.5s ease-in-out;
+-o-transition:all 0.5s ease-in-out;
+-ms-transition:all 0.5s ease-in-out;
+}
+
+td {
+margin-top:10px;
+vertical-align:bottom;
+text-align:right;
+width:110px;
+font-family:Lavanderia;
+letter-spacing:3px;
+border:1px solid #000;
+padding:5px;
+line-height:120%;
+}
+
+#hm1:hover #img1 {
+opacity:0;
+}
+
+#hm1:hover table {
+opacity:1;
+-webkit-transition:all 0.5s ease-in-out;
+-moz-transition:all 0.5s ease-in-out;
+-o-transition:all 0.5s ease-in-out;
+-ms-transition:all 0.5s ease-in-out;
+}
+
+#hm2 {
+margin-left:800px;
+width:280px;
+height:280px;
+position:absolute;
+z-index:500;
+padding:10px;
+background:#eee;
+-webkit-transition:all 0.5s ease-in-out;
+-moz-transition:all 0.5s ease-in-out;
+-o-transition:all 0.5s ease-in-out;
+-ms-transition:all 0.5s ease-in-out;
+}
+
+#img2 {
+-webkit-transition:all 0.5s ease-in-out;
+-moz-transition:all 0.5s ease-in-out;
+-o-transition:all 0.5s ease-in-out;
+-ms-transition:all 0.5s ease-in-out;
+opacity:1;
+z-index:10000;
+margin-top:10px;
+margin-left:10px;
+}
+
+#img2 img {
+position:absolute;
+z-index:10000;
+min-width:260px;
+min-height:260px;
+max-width:260px;
+max-width:260px;
+}
+
+#hm2:hover #img2 {
+opacity:0;
+}
+
+#hm2:hover #facts {
+opacity:1;
+-webkit-transition:all 0.5s ease-in-out;
+-moz-transition:all 0.5s ease-in-out;
+-o-transition:all 0.5s ease-in-out;
+-ms-transition:all 0.5s ease-in-out;
+}
+
+#container:hover #img1 {
+opacity:0;
+}
+
+#container:hover table {
+opacity:1;
+}
+
+#container:hover #img2 {
+opacity:0;
+}
+
+#container:hover #facts {
+opacity:1;
+}
+
+#facts {
+width:260px;
+font-family:Lavanderia;
+font-size:36px;
+letter-spacing:4px;
+line-height:80%;
+padding-top:10px;
+padding-left:10px;
+opacity:0;
+-webkit-transition:all 0.5s ease-in-out;
+-moz-transition:all 0.5s ease-in-out;
+-o-transition:all 0.5s ease-in-out;
+-ms-transition:all 0.5s ease-in-out;
+}
+
+#facts ol {
+margin-left:-5px;
+font-family:Intro;
+font-size:18px;
+width:260px;
+line-height:80%;
+}
+
+#facts hum {
+font-family:helvetica;
+font-size:12px;
+letter-spacing:0px;
+margin-left:-5px;
+line-height:100%;
+}
+
+#text {
+width:440px;
+min-height:480px;
+padding:10px;
+margin-left:390px;
+margin-top:-300px;
+border:1px solid #000;
+text-align:justify;
+}
+
+</style>
+</head>
+<body>
+<h1>about</h1>
+<div id="quote">"It does not matter how slow you go,<i>so long as</i> you do not stop."</div>
+<div id="container">
+<div id="hm1">
+<div id="img1">
+<img src="http://31.media.tumblr.com/d03473829000989da6f3814b2370fff4/tumblr_mrw9e9XRI71qekfnso3_250.png"></div>
+<table>
+<tr>
+<td><div style="align:top;text-align:left;font-family:intro;font-size:18px;">Name:</div>hi</td>
+</tr>
+<tr>
+<td><div style="align:top;text-align:left;font-family:intro;font-size:18px;">Age:</div>hey</td>
+</tr>
+<tr>
+<td><div style="align:top;text-align:left;font-family:intro;font-size:18px;">Birthday:</div>hiya</td>
+</tr>
+<tr>
+<td><div style="align:top;text-align:left;font-family:intro;font-size:18px;">Location:</div>hello</td>
+</tr>
+<tr>
+<td><div style="align:top;text-align:left;font-family:intro;font-size:18px;">Blog Style:</div>heyo</td>
+</tr>
+</table>
+</div>
+<div id="hm2">
+<div id="img2">
+<img src="http://31.media.tumblr.com/dee37f563850c0831a548ced4452fdc3/tumblr_mrw9e9XRI71qekfnso2_250.png">
+</div>
+<div id="facts">Fun Facts:
+<ol>
+<li><hum>See, you put facts about yourself here.</hum></li>
+<li><hum>More facts.</hum></li>
+<li><hum>Put as many as you want. Just not too many.</hum></li>
+</ol></div>
+</div>
+</div>
+<div id="text">
+LOOK THIS IS WHERE YOUR ABOUT GOES!<p>
+Just keep on writing<p>
+and it'll keep<p>
+filling up.<p>
+Actually, <p>
+the longer it is, <p>
+the better, <p>
+funnily enough.</div>
+<div id="nav"><a href="/">home</a><a href="/ask">ask</a><a href="http://tumblr.com/dashboard">dash</a><a href="http://seeroflights.tumblr.com">cred</a></div>
+</body>
+</html>

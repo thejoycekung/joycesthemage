@@ -1,0 +1,606 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<!--
+ 
+theme 7 (new perspective) by seeroflights
+ 
+please don't [re]move the credit
+please don't redistribute as your own
+ 
+-->
+ 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ 
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+ 
+ 
+<meta name="color:Text" content="#bbbbbb"/>
+<meta name="color:Link" content="#aaaaaa"/>
+<meta name="color:Tags" content="#cccccc"/>
+<meta name="color:Hover" content="#f1f1f1"/>
+<meta name="color:Line" content="#f2f2f2"/>
+<meta name="color:Border" content="#eeeeee"/>
+<meta name="color:bg" content="#ffffff"/>
+<meta name="color:scrollbarbg" content="ffffff"/>
+ 
+<meta name="image:sidebar" content=""/>
+<meta name="image:bg" content=""/>
+ 
+<meta name="text:linkA" content="">
+<meta name="text:linkA url" content="/">    
+<meta name="text:linkB" content="">
+<meta name="text:linkB url" content="/">
+<meta name="text:linkC" content="">
+<meta name="text:linkC url" content="/">
+<meta name="text:linkD" content="">
+<meta name="text:linkD url" content="/">
+<meta name="text:stats" content="/">
+<meta name="if:Stats" content="0" />
+<meta name="if:DarkSidebar" content="1" />
+ 
+<style type="text/css">
+
+@import url(http://weloveiconfonts.com/api/?family=iconicfill);
+
+/* iconicfill */
+[class*="iconicfill-"]:before {
+  font-family: 'IconicFill', sans-serif;
+  font-size:25px;
+  color:#000;
+}
+
+ ::-webkit-scrollbar {
+width: 5px;height: 5px;}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+height: 6px;display: block;background-color: {color:white};}
+::-webkit-scrollbar-track-piece {
+background-color:#fff;}
+::-webkit-scrollbar-thumb:vertical {
+height: 9px;background-color:#000;border-top:1px solid {color:scrollbarbg};border-bottom:1px solid {color:scrollbarbg};}
+::-webkit-scrollbar-thumb:horizontal {height:9px;background-color:#000;}
+ 
+ 
+body {
+    background-image:url('{image:bg}');
+    background-repeat:none;
+    background-color:{color:bg};
+    color:{color:text};
+    font-family:Arial, Helvetica;
+    font-size:11px;
+    line-height:100%;
+}
+ 
+a {
+    text-decoration:none;
+    -moz-outline-style:none;
+    color:{color:link};
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    -ms-transition:all 0.5s ease-in-out;
+}
+ 
+img {
+    border:none;
+}
+ 
+ 
+h1 {
+    font-size:18px;
+    text-transform:uppercase;
+    line-height:100%;
+}
+ 
+blockquote {
+    margin-left:5px;
+    padding-left:5px;
+    border-left:2px solid;
+}
+   
+blockquote blockquote {
+    padding-left:5px;
+    border-left:2px solid;
+}
+ 
+ 
+a:hover {
+    color:{color:hover};
+}
+
+#sidebar {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:300px;
+    height:700px;
+    -webkit-transition:all 0.8s ease-in-out;
+    transition:all 0.8s ease-in-out;
+}
+
+#sidebar img {
+    position:fixed;
+    width:300px;
+    height:750px;
+    z-index:-1;
+    -webkit-transition:all 0.8s ease-in-out;
+    transition:all 0.8s ease-in-out;
+}
+
+#title {
+    position:fixed;
+    z-index:5;
+    margin-top:450px;
+    margin-left:25px;
+    width:250px;
+    height:30px;
+    line-height:100%;
+    font-family:georgia;
+    font-size:30px;
+    font-style:italic;
+    text-align:center;
+    text-shadow:1px 1px #ddd;
+    color:#000;
+    letter-spacing:2px;
+    -webkit-transition:all 0.8s ease-in-out;
+    transition:all 0.8s ease-in-out;
+}
+
+#nav {
+    position:fixed;
+    display:inline-block;
+    z-index:5;
+    margin-top:550px;
+    margin-left:75px;
+    width:150px;
+    height:40px;
+    background-color:rgba(255,255,255,0.2);
+    -webkit-transition:all 0.8s ease-in-out;
+    transition:all 0.8s ease-in-out;
+}
+
+#nav a {
+    display:inline-block;
+    margin:15px 5px 10px 10px;
+}
+
+#desc {
+    position:fixed;
+    margin-top:200px;
+    margin-left:75px;
+    z-index:2;
+    width:130px;
+    height:80px;
+    padding:30px 10px;
+    color:#000;
+    text-align:center;
+    background-color:rgba(255,255,255,0.2);
+    opacity:1;
+    -webkit-transition:all 0.8s ease-in-out;
+    transition:all 0.8s ease-in-out;
+}
+
+{block:ifDarkSidebar}
+
+#title {
+    position:fixed;
+    z-index:5;
+    margin-top:450px;
+    margin-left:25px;
+    width:250px;
+    height:30px;
+    line-height:100%;
+    font-family:georgia;
+    font-size:30px;
+    font-style:italic;
+    text-align:center;
+    text-shadow:1px 1px #ddd;
+    color:#fff;
+    letter-spacing:2px;
+    -webkit-transition:all 0.8s ease-in-out;
+    transition:all 0.8s ease-in-out;
+}
+
+#nav {
+    position:fixed;
+    display:inline-block;
+    z-index:5;
+    margin-top:550px;
+    margin-left:75px;
+    width:150px;
+    height:40px;
+    background-color:rgba(255,255,255,0.2);
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    -webkit-transition:all 0.8s ease-in-out;
+    transition:all 0.8s ease-in-out;
+}
+
+#nav a {
+    display:inline-block;
+    margin:15px 5px 10px 10px;
+}
+
+#desc {
+    position:fixed;
+    margin-top:200px;
+    margin-left:75px;
+    z-index:2;
+    width:130px;
+    height:80px;
+    padding:30px 10px;
+    color:#fff;
+    text-align:center;
+    background-color:rgba(255,255,255,0.2);
+    opacity:1;
+    -webkit-transition:all 0.8s ease-in-out;
+    transition:all 0.8s ease-in-out;
+}
+
+{/block:ifDarkSidebar}
+
+#pagi {
+    position:fixed;
+    margin-top:200px;
+    margin-left:75px;
+    width:140px;
+    height:15px;
+    z-index:500;
+    opacity:0;
+    padding:5px;
+    background:#000;
+    color:#fff;
+    font-size:15px;
+    font-family:helvetica;
+    text-align:center;
+    -webkit-transition:all 0.8s ease-in-out;
+    transition:all 0.8s ease-in-out;
+}
+
+#pagi a {
+    color:#fff;
+}
+ 
+.links {
+    position:fixed;
+    margin-left:75px;
+    margin-top:200px;
+    width:150px;
+    height:150px;
+    z-index:5;
+    font-family:Arial, Helvetica;
+    text-align:center;
+    text-transform:uppercase;
+    opacity:0;
+    -webkit-transition:all 0.8s ease-in-out;
+    transition:all 0.8s ease-in-out;
+}
+ 
+.links a {
+    min-width:100px;
+    margin-top:5px;
+    height:20px;
+    padding:5px;
+    display:block;
+    letter-spacing:2px;
+    line-height:150%;
+    color:#fff;
+    background:#000;
+}
+ 
+.links a:hover {
+   color:#000;
+   background:#fff;
+}
+
+#sidebar:hover #title {
+    margin-top:100px;
+    color:#000;
+}
+
+#sidebar:hover #desc {
+    opacity:0;
+}
+
+#sidebar:hover .links {
+    opacity:1;
+}
+
+#sidebar:hover img {
+    opacity:0;
+}
+
+#sidebar:hover #pagi {
+    margin-top:345px;
+    opacity:1;
+}
+
+#sidebar:hover #nav {
+    -webkit-filter:invert(0%);
+    filter:invert(0%);
+}
+ 
+#all {
+    padding:10px;
+    width:500px;
+    margin-left:400px;
+    margin-top:50px;
+    font-size:10px;
+}
+ 
+#posts {
+    width:500px;
+    padding-bottom:20px;
+    padding:10px;
+    margin-top:30px;
+    background-color:{color:Post};
+}
+
+.bubble {
+    align:right;
+    background: #eee;
+    margin:7px 0px 5px 66px;
+    padding:10px;
+    position: relative;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+   
+.bubble p {
+    margin:1px 0px;
+}
+   
+.bubble span {
+    display:block;
+    position:absolute;
+    width:1px;
+    height:1px;
+    font-size: 0;
+    line-height: 1px;
+    left:-10px;
+    top:10px;
+    border-top:7px solid transparent;
+    border-bottom:7px solid transparent;
+    border-right:10px solid #eee;
+}
+ 
+.askborder {
+    float: left;
+    margin: 1px 4px 0 0;
+    padding: 2px;
+    background: #eee
+}
+
+#line {
+    width:500px;
+    height:5px;
+    border-bottom:1px solid #f2f2f2;
+}
+ 
+#stuffz {
+    position:relative;
+    z-index:10;
+    width:480px;
+    margin-left:20px;
+    margin-top:5px;
+    text-align:center;
+    text-transform:uppercase;
+    font-size:10px;
+    font-style:none;
+    opacity:1;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+}
+ 
+#tags {
+    font-family:cambria;
+    letter-spacing:0px;
+    text-transform:lowercase;
+    font-size:10px;
+    font-style:italic;
+    margin-top:10px;
+    text-align:center;
+}
+   
+#tags a {
+    display:inline-block;
+    padding:-3px;
+    color:#cccccc;
+}
+
+.buttons {
+    position:absolute;
+    z-index:2;
+    width:460px;
+    height:20px;
+}
+
+.buttons li {
+    float:right;
+    margin:5px;
+    list-style:none;
+}
+
+.buttons li:first-child {
+    float:left;
+    margin-left:-35px;
+}
+
+#statcon {
+    position:fixed;
+    bottom:2px;
+    right:-82px;
+    font-size:9px;
+    letter-spacing:1px;
+    font-family:calibri;
+    text-transform:uppercase;
+    padding:4px;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+}
+ 
+#statcon:hover {right:0px;}
+ 
+#cred {
+    display:inline-block;
+    border:1px solid;
+    padding:4px;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    }
+   
+#cred a:hover{
+    color:#000;
+}
+
+{block:ifStats}
+
+#statcon {
+    position:fixed;
+    bottom:2px;
+    right:-105px;
+    font-size:9px;
+    letter-spacing:1px;
+    font-family:calibri;
+    text-transform:uppercase;
+    padding:4px;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+}
+
+#statcon:hover {right:0px;}
+
+#stats {
+    display:inline-block;
+    right:0px;
+    border:1px solid;
+    padding:4px;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+}
+ 
+#stats a:hover{
+    color:#000;
+}
+
+{/block:ifStats}
+ 
+{CustomCSS}
+</style>
+</head>
+
+<body>
+<div id="sidebar">
+<img src="{image:sidebar}">
+
+<div id="pagi">
+{block:Pagination}
+{block:PreviousPage}<a href="{PreviousPage}">&larr;</a>&nbsp;&nbsp;{/block:PreviousPage}
+{block:JumpPagination length="3"}
+{block:CurrentPage}<span class="current_page">{PageNumber}</span>&nbsp;&nbsp;{/block:CurrentPage}
+{block:JumpPage}<a class="jump_page" href="{URL}">{PageNumber}</a>&nbsp;&nbsp;{/block:JumpPage}
+{/block:JumpPagination}
+{block:NextPage}<a href="{NextPage}">&rarr;</a>{/block:NextPage}
+{/block:Pagination}
+{block:PermalinkPagination}
+{block:NextPost}
+<a href="{NextPost}">&larr;</a>
+{/block:NextPost}
+{block:PreviousPost}
+<a href="{PreviousPost}">&rarr;</a>
+{/block:PreviousPost}
+{/block:PermalinkPagination}
+</div>
+
+<div id="nav">
+<a class="iconicfill-home" href="/"></a>
+<a class="iconicfill-mail" href="/ask"></a>
+<a class="iconicfill-clock" href="/archive"></a>
+<a class="iconicfill-wrench" href="http://seeroflights.tumblr.com" style="margin-right:0px;"></a>
+</div>
+
+<div class="links">
+{block:IfLinkA}
+<a href="{text:linkA url}">{text:linkA}</a>
+{/block:IfLinkA}
+{block:IfLinkB}
+<a href="{text:linkB url}">{text:linkB}</a>
+{/block:IfLinkB}
+{block:IfLinkC}
+<a href="{text:linkC url}">{text:linkC}</a>
+{/block:IfLinkC}
+{block:IfLinkD}
+<a href="{text:linkD url}">{text:linkD}</a>
+{/block:IfLinkD}
+</div>
+
+<div id="desc">
+{Description}
+<br>
+</div>
+
+<div id="title">{Title}</div>
+
+</div>
+ 
+<div id="all">
+{block:Posts}
+<div id="posts">
+ 
+{block:Text}{block:Title}<h1>{Title}</h1>{/block:Title}{Body}{/block:Text}
+ 
+{block:Photo}{LinkOpenTag}<img src="{PhotoURL-500}">{LinkCloseTag}{block:Caption}{Caption}{/block:Caption}{/block:Photo}
+ 
+{block:Link}<h1><a href="{URL}"{Target}>{Name}→</a></h1>{block:Description}{Description}{/block:Description}{/block:Link}
+ 
+{block:Photoset}{Photoset-500}{block:Caption}{Caption}{/block:Caption}{/block:Photoset}
+ 
+{block:Quote}<div style="font-size:18px;line-height:100%;">❝{Quote}❞</div><P><div style="text-align:right;">--{Source}</div>{/block:Quote}
+ 
+{block:Audio}<left>{AudioPlayerWhite}
+{block:TrackName}<b>Title:</b> {TrackName}<br />{/block:TrackName}
+<br>{block:Artist}<b>Artist:</b> {Artist}<br />{/block:Artist}
+{/block:ExternalAudio}<br><b>Played:</b> {PlayCount} times{block:Caption}{Caption}{/block:Caption}</left>
+{/block:Audio}
+ 
+{block:Video}{Video-500}{block:Caption}{Caption}{/block:Caption}{/block:Video}
+ 
+{block:Chat}{block:Title}<h1>{Title}</h1>{/block:Title}{block:Lines}{block:Label}<b>{Label}</b>{/block:Label} {Line}<br>{/block:Lines}{/block:Chat}
+ 
+{block:Answer}
+<img src="{AskerPortraitURL-48}" width="40px" align="left" class="askborder"><div class="bubble"><span></span>{Asker} asked: {Question}&nbsp;</div>{Answer}
+{/block:Answer}
+
+<div id="line"></div>
+<ul class="buttons">
+    <li>{ReblogButton size="14"}</li>
+    <li>{LikeButton size="15"}</li>
+</ul>
+<div id="stuffz">
+<br><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}</a> // <a href="{Permalink}">{12Hour}:{Minutes} </a> {block:RebloggedFrom} <a href="{ReblogParentURL}">via</a>{/block:RebloggedFrom} {block:ContentSource} <a href="{SourceURL}">© {SourceLink}</a> {/block:ContentSource} // <a href="{Permalink}">{NoteCountWithLabel}</a><br>
+{block:HasTags}<div id="tags">{block:Tags} -<a href="{TagURL}">{Tag}</a> {/block:Tags}-</div>{/block:HasTags}</div></div>
+{/block:Posts}
+{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+</div></div>
+ 
+ 
+<div id="statcon">{block:ifStats}<div id="stats">{text:stats}</div>{/block:ifStats}&nbsp; &nbsp; &nbsp;<div id="cred"><a href="http://seeroflights.tumblr.com/">seeroflights<font color="red">&hearts;</font></a></center></div></div>
+     
+       
+</body></html>

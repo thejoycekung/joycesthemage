@@ -1,0 +1,95 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+     
+    <!--
+     
+    redirect theme by seeroflights
+    lol idk use as base or use as theme
+    either way pls credit
+     
+    -->
+     
+     
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+     
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+     
+     
+    <meta name="color:Text" content="#bbbbbb"/>
+    <meta name="color:Link" content="#aaaaaa"/>
+    <meta name="color:Border" content="#eeeeee"/>
+    <meta name="color:scrollbarbg" content="ffffff"/>
+
+    <meta name="image:bg" content=""/>
+    
+    <meta name="text:ask link" content=""/>
+    <meta name="text:oldurl" content=""/>
+    <meta name="text:newblog" content=""/>
+    <meta name="text:newblogurl" content=""/>
+    
+    <style type="text/css">
+     
+     
+     ::-webkit-scrollbar {
+    width: 5px;height: 5px;}
+    ::-webkit-scrollbar-button:start:decrement,
+    ::-webkit-scrollbar-button:end:increment {
+    height: 6px;display: block;background-color: {color:white};}
+    ::-webkit-scrollbar-track-piece {
+    background-color: {color:scrollbarbg};}
+    ::-webkit-scrollbar-thumb:vertical {
+    height: 9px;background-color: {color:scrollbarbg};border-top:1px solid {color:scrollbarbg};border-bottom:1px solid {color:scrollbarbg};}
+     
+     
+    body {
+        margin:0px;
+        color:#000;
+        font-family:Arial;
+        font-size:15px;
+        text-align:justify;
+    }
+     
+    h1 {
+        font-size:12px;
+        text-transform:uppercase;
+        width:2000px;
+        height:200px;
+    }
+     
+    #header {background-color:#eee;}
+    #url {z-index:500;position:absolute;margin-left:20px;margin-top:-37px;}
+    #stuff {margin-top:25px;margin-left:50px;}
+    
+    #nav {margin-top:10px;margin-left:50px;width:1000px;}
+     
+</style>
+    
+</head><body>
+<div id="header">
+<img src="http://static.tumblr.com/rxgmiea/BJUms9adm/search_bar.png">
+</div>
+<div id="url">
+{text:oldurl}
+</div>
+<div id="stuff">
+We're sorry. The url {text:oldurl} no longer exists. <br><br>
+<div style="color:red;display:inline;">Did you mean:</div> <b><i><a href="{text:newblogurl}">{text:newblog}</a></i></b></div><br>
+<div id="nav">
+<a href="{text:newblogurl}">hi i used to be {text:oldurl}</a><br>
+<div style="color:green;">{text:newblogurl}</div>
+fate works in mysterious ways that's why i got a new url
+</div>
+<div id="nav">
+<a href="http://tumblr.com/dashboard">Dashboard - Tumblr</a><br>
+<div style="color:green;">http://tumblr.com/dashboard</div>
+Follow the world's creators.
+</div>
+<div id="nav">
+<a href="http://seeroflights.tumblr.com">Theme Credit</a><br>
+<div style="color:green;">http://seeroflights.tumblr.com</div>
+i'm drowning in fandoms
+</div>
+</body></html>
